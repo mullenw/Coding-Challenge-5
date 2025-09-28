@@ -7,5 +7,7 @@ const employees = [
 function calculateBasePay( rate, hours ) {
     return rate * Math.min(hours, 40);
 }
-
-// Math.max(hours - 40, 0)
+function calculateOvertimePay(rate, hours) {
+    const overtimeHours = Math.max(hours - 40,0);
+    return overtimeHours * rate * 1.5;
+}
