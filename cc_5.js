@@ -23,9 +23,12 @@ function processPayroll(employee) {
 
     return {
         name: employee.name,
-        basepay: basePay.toFixed(2),
+        basePay: basePay.toFixed(2),
         overtimePay: overtimePay.toFixed(2),
         grossPay: grossPay.toFixed(2),
         netPay: netPay.toFixed(2)
     };
+}
+for (let emp of employees) {
+    console.log(processPayroll(emp));
 }
